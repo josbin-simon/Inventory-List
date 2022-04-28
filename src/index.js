@@ -9,7 +9,7 @@ import AddItem from './Routes/AddItem';
 import ListItems from './Routes/ListItems';
 import RemoveItem from './Routes/RemoveItem';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.scss';
+// import './index.scss';
 import  LandingPage  from './Routes/LandingPage';
 
 ReactDOM.render(
