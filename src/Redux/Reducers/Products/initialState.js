@@ -1,3 +1,3 @@
 export const initialState = {
-    products: [{ name: 'Phone', code: '123', quantity: 0}]
+    products: [{ name: '', code: '', quantity: ''}]
 };

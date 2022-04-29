@@ -23,15 +23,9 @@ class LandingPage extends React.Component {
         <Navbar bg='light' expand='lg'>
           <Container>
             <Navbar.Collapse id='basic-navbar-nav'>
-              <Nav className='me-auto' activeKey={this.props.location.pathname}>
+              <Nav fill variant='tabs' activeKey={this.props.location.pathname}>
                 <Nav.Link
-                  onClick={(e) => {
-                    this.preventDefaultBehaviour(e, ROUTES.REMOVE_ITEM);
-                  }}
-                >
-                  Delete Items
-                </Nav.Link>
-                <Nav.Link
+                  eventKey={ROUTES.LANDING_PAGE}
                   onClick={(e) => {
                     this.preventDefaultBehaviour(e, ROUTES.LANDING_PAGE);
                   }}
@@ -39,6 +33,15 @@ class LandingPage extends React.Component {
                   Add Items
                 </Nav.Link>
                 <Nav.Link
+                  eventKey={ROUTES.REMOVE_ITEM}
+                  onClick={(e) => {
+                    this.preventDefaultBehaviour(e, ROUTES.REMOVE_ITEM);
+                  }}
+                >
+                  Delete Items
+                </Nav.Link>
+                <Nav.Link
+                  eventKey={ROUTES.LIST_ITEMS}
                   onClick={(e) => {
                     this.preventDefaultBehaviour(e, ROUTES.LIST_ITEMS);
                   }}
