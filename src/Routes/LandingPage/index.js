@@ -11,6 +11,12 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  preventDefaultBehaviour = (e, url) => {
+    e.preventDefault();
+    this.props.history.push(url);
+  };
+
   render() {
     return (
       <>
@@ -18,9 +24,27 @@ class LandingPage extends React.Component {
           <Container>
             <Navbar.Collapse id='basic-navbar-nav'>
               <Nav className='me-auto' activeKey={this.props.location.pathname}>
-                <Nav.Link href={ROUTES.LANDING_PAGE}> Add Items</Nav.Link>
-                <Nav.Link href={ROUTES.REMOVE_ITEM}>Delete Items</Nav.Link>
-                <Nav.Link href={ROUTES.LIST_ITEMS}>List Items</Nav.Link>
+                <Nav.Link
+                  onClick={(e) => {
+                    this.preventDefaultBehaviour(e, ROUTES.REMOVE_ITEM);
+                  }}
+                >
+                  Delete Items
+                </Nav.Link>
+                <Nav.Link
+                  onClick={(e) => {
+                    this.preventDefaultBehaviour(e, ROUTES.LANDING_PAGE);
+                  }}
+                >
+                  Add Items
+                </Nav.Link>
+                <Nav.Link
+                  onClick={(e) => {
+                    this.preventDefaultBehaviour(e, ROUTES.LIST_ITEMS);
+                  }}
+                >
+                  List Items
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

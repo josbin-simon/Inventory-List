@@ -9,8 +9,8 @@ import AddItem from './Routes/AddItem';
 import ListItems from './Routes/ListItems';
 import RemoveItem from './Routes/RemoveItem';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './index.scss';
-import  LandingPage  from './Routes/LandingPage';
+import './index.scss';
+import LandingPage from './Routes/LandingPage';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,9 +18,6 @@ ReactDOM.render(
       <Router>
         <Switch>
           <LandingPage />
-          {/* <Route path={ROUTES.LIST_ITEMS} component={ListItems} />
-          <Route path={ROUTES.REMOVE_ITEM} component={RemoveItem} />
-          <Route path={ROUTES.LANDING_PAGE} component={AddItem} /> */}
         </Switch>
       </Router>
     </ReduxProvider>

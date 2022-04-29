@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { AddItem } from './AddItem';
 
 const mapStateToProps = (state) => {
-  return {};
+  return { ...state.ProductsReducer };
 };
 
 const mapDispatchToProps = (dispatch) => {
